@@ -1,3 +1,27 @@
+header{
+    display: flex;
+}
+
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
 .hide {
     display: none;
+}
+
+#high-score{
+    width: 80%;
+}
+
+#timer{
+    width: 20%;
 }

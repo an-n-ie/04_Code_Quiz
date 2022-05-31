@@ -7,3 +7,4 @@
 
 4. Show a dashboard of all the high scores
 */ 
+
