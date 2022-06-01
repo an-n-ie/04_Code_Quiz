@@ -20,23 +20,24 @@ var timeRemaining = 60
 var clockId
 
 var question = [{
-    title: "new q1",
-    answers: ["1-1", "1-2", "1-3", "1-4"],
-    solution: "1-1"
+    title: "1 + 1 =",
+    answers: ["1", "11", "22", "2"],
+    solution: "2"
 }, {
-    title: "new q2",
-    answers: ["2-1", "2-2", "2-3", "2-4"],
-    solution: "2-1"
+    title: "2 + 2 =",
+    answers: ["7", "2", "22", "4"],
+    solution: "4"
 }, {
-    title: "new q3",
-    answers: ["3-1", "3-2", "3-3", "3-4"],
-    solution: "3-1"
+    title: "6 + 6 =",
+    answers: ["66", "12", "6", "14"],
+    solution: "12"
 }, {
-    title: "new q4",
-    answers: ["4-1", "4-2", "4-3", "4-4"],
-    solution: "4-1"
+    title: "100 + (-101) =",
+    answers: ["10", "1", "-100", "-1"],
+    solution: "-1"
 }]
 
+var correct = 0;
 var index = 0
 function countdown() {
     timeEL.textContent = timeRemaining
@@ -55,13 +56,56 @@ function firstQuestion() {
     ans3EL.textContent = question[index].answers[2]
     ans4EL.textContent = question[index].answers[3]
 }
-function secondQuestion() {
-    index++
-    firstQuestion()
+function nextQuestion(event) {
+console.log("answer clicked", event.target.innerText)
+
+    if(event.target.innerText === question[index].solution){
+        console.log("correct answer!")
+        correct++
+        console.log("correct answers", correct)
+    } else {
+        console.log("wrong answer!")
+    }
+
+
+
+    if(index === question.length){
+        // this is the function being called into action
+         endQuiz()
+    } else {
+        index++
+        firstQuestion()
+    }
 }
-ans1EL.addEventListener("click", secondQuestion)
-ans2EL.addEventListener("click", secondQuestion)
-ans3EL.addEventListener("click", secondQuestion)
-ans4EL.addEventListener("click", secondQuestion)
+
+
+// question[index].answers.foreEach((answer)=>{
+//     let choiceBtn = document.createElement("button");
+//     choiceBtn.setAttribute("value", answer)
+//     choiceBtn.textContent = answer;
+
+//     choiceBtn.onclick = handleClick
+
+// })
+
+// function handleClick(){
+//     if(this.value === question[index].solution){
+//         corect++
+//     } else {
+//         // subtract 10 off the time if its wrong
+//     }
+// }
+
+
+function endQuiz(){
+// here is the " rules " youre going to set when the function is  called
+// but this is not calling the function
+}
+
+
+ans1EL.addEventListener("click", nextQuestion)
+ans2EL.addEventListener("click", nextQuestion)
+ans3EL.addEventListener("click", nextQuestion)
+ans4EL.addEventListener("click", nextQuestion)
 
 startBtn.addEventListener("click", startGame)
