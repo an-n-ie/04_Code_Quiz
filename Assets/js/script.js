@@ -1,3 +1,7 @@
+var introEL = document.querySelector("#intro")
+var questionsEl= document.querySelector("#questions")
+var timeEL = document.querySelector("#time")
+var startBtn = document.querySelector("#start-btn")
 /*
 1. Display start page - title and paragraph start button
 
@@ -7,4 +11,17 @@
 
 4. Show a dashboard of all the high scores
 */ 
+var timeRemaining=60
+var clockId
+function countdown(){
+    timeEL.textContent=timeRemaining
+    timeRemaining--
+}
+function startGame(){
+    questionsEl.classList.remove("hide")
+    introEL.classList.add("hide")
+    clockId=setInterval(countdown, 1000)
+}
 
+
+startBtn.addEventListener("click", startGame)

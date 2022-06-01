@@ -1,18 +1,18 @@
+* {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
 header{
     display: flex;
 }
 
-body{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-
-section {
+/* section {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
-}
+    height: 50vh;
+} */
 
 .hide {
     display: none;
