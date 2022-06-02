@@ -18,6 +18,9 @@ section{
 .hide {
     display: none;
 }
+.btn {
+    background-color: yellow;
+}
 
 #high-score{
     width: 75%;
