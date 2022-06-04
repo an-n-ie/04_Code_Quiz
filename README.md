@@ -7,15 +7,15 @@ A quiz application that enables the user to generate a random password based on 
 ## Usage
 The following image shows the application's appearance and functionality:
 
-![The Password Generator](./Assets/image/pwd-gen.png)
+![The Password Generator]()
 
 ## Credits
 
-https://www.w3schools.com/js/default.asp
+
 
 ## URL
 
-GitHub: https://github.com/an-n-ie/03_JavaScript_Password_Generator
+GitHub: https://github.com/an-n-ie/04_Web_APIs_Code_Quiz
 
-Website: https://an-n-ie.github.io/03_JavaScript_Password_Generator/
+Website: https://an-n-ie.github.io/04_Web_APIs_Code_Quiz/
 
