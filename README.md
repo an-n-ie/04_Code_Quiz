@@ -7,7 +7,7 @@ A quiz application that enables the user to generate a random password based on 
 ## Usage
 The following image shows the application's appearance and functionality:
 
-![The Password Generator]()
+![Math Quiz]()
 
 ## Credits
 
